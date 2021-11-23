@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Arima Madurai";
+  src: url("../fonts/Arima-Madurai-Medium.ttf");
+}
+
+:root {
+  --color-eunry: #d4a5a5;
+  --color-derby: #ffecda;
+  --color-china-ivory: #f9ffea;
+  --color-regent-st-blue: #a6d0e4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arima Madurai", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header {
+  background-color: var(--color-eunry);
+  font-weight: bold;
+}
+
+#header-nav {
+  display: flex;
+  height: 90px;
+}
+
+#header-nav > ul {
+  display: flex;
+}
+
+#right-nav {
+  margin: auto 0 auto auto;
+  width: 50vw;
+  justify-content: space-evenly;
+}
+
+#left-nav {
+  margin: auto 0;
+}
+
+#header-nav > ul > li {
+  list-style-type: none;
+}
+
+#header-nav > ul > li > a {
+  text-decoration: none;
+  color: var(--color-china-ivory);
+}
+
+#logo-link {
+  height: 100px;
+}
+
+#logo {
+  height: 48px;
+}
