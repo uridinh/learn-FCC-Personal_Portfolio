@@ -10,6 +10,11 @@
   --color-jaffa: #f58840;
   --color-chestnut: #b85252;
   --color-ebb: #eadede;
+
+  --color-martinique: #2b2e4a;
+  --color-cinnabar: #e84545;
+  --color-solid-pink: #903749;
+  --color-eggplant: #53354a;
 }
 
 * {
@@ -32,55 +37,49 @@ html {
 
 #header {
   background-color: var(--color-chestnut);
+  display: flex;
   position: fixed;
+  height: 9vmin;
   width: 100%;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.4);
 }
 
+@media (max-width: 900px) {
+  #header {
+    height: 9vmax;
+  }
+}
+
 #header-nav {
-  display: flex;
   font-weight: bold;
   font-size: 1.3rem;
+  margin: auto 0 auto auto;
 }
 
-#header-nav > ul {
+#nav-list {
   display: flex;
-}
-
-#right-nav {
-  margin-left: auto;
   width: 50vw;
   justify-content: space-evenly;
-  padding-top: 0.2em;
 }
 
 @media (min-width: 900px) {
-  #right-nav {
+  #nav-list {
     width: 35vw;
   }
 }
 
-#left-nav {
-  /* margin: auto 0 auto 10px; */
-  margin-left: 5vmin;
-}
-
-#header-nav > ul > li {
+#nav-list > li {
   list-style-type: none;
-  margin: auto 0;
+  margin-top: 0.3em;
 }
 
-#header-nav > ul > li > a {
+.nav-link {
   text-decoration: none;
   color: var(--color-black);
 }
 
 #logo {
-  height: 9vmin;
-}
-
-#logo-link {
-  display: flex;
+  max-height: 100%;
 }
 
 .line {
