@@ -36,7 +36,7 @@ html {
 }
 
 #header {
-  background-color: var(--color-chestnut);
+  background-color: var(--color-martinique);
   display: flex;
   position: fixed;
   height: 9vmin;
@@ -54,17 +54,19 @@ html {
   font-weight: bold;
   font-size: 1.3rem;
   margin: auto 0 auto auto;
+  /* margin: auto; */
 }
 
 #nav-list {
   display: flex;
-  width: 50vw;
+  width: 40vw;
+  /* justify-content: space-evenly; */
   justify-content: space-evenly;
 }
 
 @media (min-width: 900px) {
   #nav-list {
-    width: 35vw;
+    width: 30vw;
   }
 }
 
@@ -75,11 +77,17 @@ html {
 
 .nav-link {
   text-decoration: none;
-  color: var(--color-black);
+  color: var(--color-ebb);
+}
+
+#logo-link {
+  height: 50%;
+  margin: auto auto auto 9vmin;
 }
 
 #logo {
-  max-height: 100%;
+  /* max-height: 50%; */
+  height: 100%;
 }
 
 .line {
