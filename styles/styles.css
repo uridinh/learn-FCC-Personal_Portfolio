@@ -15,6 +15,8 @@
   --color-cinnabar: #e84545;
   --color-solid-pink: #903749;
   --color-eggplant: #53354a;
+
+  --height-header: 9vmin;
 }
 
 * {
@@ -39,34 +41,35 @@ html {
   background-color: var(--color-martinique);
   display: flex;
   position: fixed;
-  height: 9vmin;
+  min-height: 50px;
+  height: var(--height-header);
   width: 100%;
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.4);
-}
-
-@media (max-width: 900px) {
-  #header {
-    height: 9vmax;
-  }
 }
 
 #header-nav {
   font-weight: bold;
   font-size: 1.3rem;
-  margin: auto 0 auto auto;
+  margin: auto var(--height-header) auto auto;
   /* margin: auto; */
 }
 
 #nav-list {
   display: flex;
-  width: 40vw;
+  width: 30vw;
   /* justify-content: space-evenly; */
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
   #nav-list {
-    width: 30vw;
+    width: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  #nav-list {
+    width: 50vw;
   }
 }
 
@@ -82,7 +85,7 @@ html {
 
 #logo-link {
   height: 50%;
-  margin: auto auto auto 9vmin;
+  margin: auto var(--height-header);
 }
 
 #logo {
@@ -102,16 +105,16 @@ html {
   text-align: center;
   height: 100vh;
   background-color: var(--color-ebb);
-  color: var(--color-black);
   background: linear-gradient(
     0deg,
     rgba(234, 222, 222, 1) 0%,
-    rgba(128, 128, 128, 1) 100%
+    rgba(83, 53, 74, 0.7) 100% /* rgba(128, 128, 128, 1) 100% */
   );
 }
 
 #welcome > h2 {
   font-size: 4rem;
+  color: var(--color-black);
   margin-top: -1em;
 }
 
@@ -123,7 +126,7 @@ html {
 
 #welcome > h3 {
   font-size: 1.5rem;
-  color: var(--color-chestnut);
+  color: var(--color-solid-pink);
   margin-top: -1em;
   padding: 1em;
 }
@@ -131,15 +134,17 @@ html {
 #about {
   text-align: center;
   padding: 10rem 2rem;
-  background-color: var(--color-jaffa);
+  /* background-color: var(--color-jaffa); */
+  background-color: var(--color-solid-pink);
 }
 
 #about-title {
   max-width: 70vw;
+  color: var(--color-ebb);
   font-size: 2rem;
   margin: 0 auto 6rem auto;
   padding-bottom: 1rem;
-  border-bottom: 0.15rem solid var(--color-black);
+  border-bottom: 0.15rem solid var(--color-ebb);
 }
 
 #project-div {
@@ -163,25 +168,25 @@ html {
 }
 
 #project-div figure:hover img {
-  box-shadow: 0 0 10px 2px var(--color-black);
+  box-shadow: 0 0 10px 2px var(--color-martinique);
 }
 
 #project-div figure:hover figcaption {
-  color: var(--color-chestnut);
+  color: var(--color-cinnabar);
 }
 
 #project-div img {
   max-width: 100%;
   border-radius: 0.5rem;
   padding: 0.2rem;
-  border: 2px solid var(--color-chestnut);
-  box-shadow: 0 1px 5px 1px var(--color-black);
+  border: 2px solid var(--color-eggplant);
+  box-shadow: 0 1px 5px 1px var(--color-martinique);
   transition: box-shadow 0.2s ease-out;
 }
 
 #project-div figcaption {
   padding-bottom: 0.5em;
-  color: var(--color-black);
+  color: var(--color-martinique);
   font-weight: bold;
   transition: color 0.2s ease-out;
 }
