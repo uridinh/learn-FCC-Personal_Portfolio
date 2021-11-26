@@ -25,25 +25,22 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
+  font-size: 16px;
   font-family: "Arima Madurai", sans-serif;
+  scroll-behavior: smooth;
 }
 
 #header {
   background-color: var(--color-chestnut);
-  font-weight: bold;
-  font-size: 1.3rem;
   position: fixed;
   width: 100%;
-  top: 0;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.4);
 }
 
 #header-nav {
   display: flex;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 #header-nav > ul {
