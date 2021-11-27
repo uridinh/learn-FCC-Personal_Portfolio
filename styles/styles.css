@@ -19,7 +19,8 @@
   --color-shadow: rgba(0, 0, 0, 0.4);
   --color-shadow-bold: rgba(0, 0, 0, 0.75);
 
-  --height-header: 9vmin;
+  /* --height-header: 9vmin; */
+  --height-header: 70px;
 }
 
 * {
@@ -44,56 +45,74 @@ html {
   background-color: var(--color-solid-pink);
   display: flex;
   position: fixed;
-  min-height: 50px;
+  align-items: center;
   height: var(--height-header);
+  top: 0;
+  left: 0;
   width: 100%;
   box-shadow: 0 2px 0 0 var(--color-shadow);
+
+  font-size: 1.3rem;
+
+  padding: 0 var(--height-header) 0 var(--height-header);
+}
+
+#logo-link {
+  height: 60%;
+  text-decoration: none;
+  color: var(--color-ebb);
+}
+
+#logo {
+  max-height: 100%;
 }
 
 #navbar {
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin: auto var(--height-header) auto auto;
-  /* margin: auto; */
+  margin-left: auto;
 }
 
 #nav-list {
   display: flex;
-  width: 30vw;
-  /* justify-content: space-evenly; */
-  justify-content: space-between;
-}
-
-@media (max-width: 900px) {
-  #nav-list {
-    width: 40vw;
-  }
-}
-
-@media (max-width: 600px) {
-  #nav-list {
-    width: 50vw;
-  }
 }
 
 #nav-list > li {
-  list-style-type: none;
-  margin-top: 0.3em;
+  list-style: none;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--color-ebb);
+  display: block;
+  padding: 1.2rem 1.8rem 0.8rem 1.8rem;
 }
 
-#logo-link {
-  height: 61.8%;
-  margin: auto var(--height-header);
+.nav-link:hover {
+  background: var(--color-martinique);
 }
 
-#logo {
-  /* max-height: 50%; */
-  height: 100%;
+@media screen and (max-width: 1007px) {
+  .nav-link {
+    padding: 1.2rem 0.8rem 0.8rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #header {
+    --height-header: 50px;
+    padding: 0 30px 0 30px;
+  }
+  .nav-link {
+    padding: 0.5rem;
+    padding-top: 0.7rem;
+
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #header {
+    padding: 0 20px 0 20px;
+  }
 }
 
 /*-----------------------------------------*/
@@ -142,7 +161,7 @@ html {
   font-weight: normal;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1007px) {
   #welcome-section > h1 {
     font-size: 4rem;
   }
@@ -151,7 +170,7 @@ html {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   #welcome-section > h1 {
     font-size: 3.5rem;
   }
@@ -293,13 +312,13 @@ html {
 }
 
 #contact > h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--color-jaffa);
   padding-top: 2em;
 }
 
 #contact > h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--color-ebb);
   font-weight: normal;
   font-style: italic;
@@ -331,6 +350,41 @@ html {
 
 .contact-link:hover {
   transform: translateY(5px);
+}
+
+@media (max-width: 1007px) {
+  #contact > h1 {
+    font-size: 3rem;
+  }
+
+  #contact > h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact-link {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 650px) {
+  #contact > h1 {
+    font-size: 2.75rem;
+  }
+  #contact > h3 {
+    font-size: 1.2rem;
+  }
+  .contact-link {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #contact > h1 {
+    font-size: 2.35rem;
+  }
+  #contact > h3 {
+    font-size: 1rem;
+  }
 }
 
 /*-----------------------------------------*/
