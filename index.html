@@ -14,42 +14,52 @@
 
     <!-- Load Styles -->
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Load fontawesome All styles -->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
   </head>
   <body>
     <header id="header">
       <a id="logo-link" href=""
         ><img id="logo" src="images/logo-ebb-h128.png" alt="Hurio Logo"
       /></a>
-      <nav id="header-nav">
+      <nav id="navbar">
         <ul id="nav-list">
-          <li><a class="nav-link" href="#welcome">Hallo</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#welcome-section">Hallo</a></li>
+          <li><a class="nav-link" href="#projects">About</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="welcome">
-        <h2>Hallo I'm Uri</h2>
+      <section id="welcome-section">
+        <h1>Hallo I'm Uri</h1>
         <h3>
           <span class="line">i'm learning to become</span>
           <span class="line">a web developer</span>
         </h3>
       </section>
-      <section id="about">
+      <section id="projects">
         <h2 id="about-title">These are some of my projects</h2>
         <div id="project-div">
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <figure>
               <img src="images/tribute-page.png" alt="Tribute Page Project" />
-              <figcaption>Tribute Page</figcaption>
+              <figcaption class="project-tile">
+                <i class="fa-solid fa-angle-left"></i>
+                Tribute Page
+                <i class="fa-solid fa-angle-right"></i>
+              </figcaption>
             </figure>
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <figure>
               <img src="images/survey-form.png" alt="Survey Form Project" />
-              <figcaption>Survey Form</figcaption>
+              <figcaption class="project-tile">
+                <i class="fa-solid fa-angle-left"></i>
+                Survey Form <i class="fa-solid fa-angle-right"></i>
+              </figcaption>
             </figure>
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
@@ -58,7 +68,11 @@
                 src="images/technical-documentation-page.png"
                 alt="Technical Documentation Page Project"
               />
-              <figcaption>Technical Documentation Page</figcaption>
+              <figcaption class="project-tile">
+                <i class="fa-solid fa-angle-left"></i>
+                Technical Documentation Page
+                <i class="fa-solid fa-angle-right"></i>
+              </figcaption>
             </figure>
           </a>
           <a href="http://" target="_blank" rel="noopener noreferrer">
@@ -67,10 +81,21 @@
                 src="images/product-landing-page.png"
                 alt="Product Landing Page Project"
               />
-              <figcaption>Product Landing Page</figcaption>
+              <figcaption class="project-tile">
+                <i class="fa-solid fa-angle-left"></i>
+                Product Landing Page <i class="fa-solid fa-angle-right"></i>
+              </figcaption>
             </figure>
           </a>
         </div>
+
+        <a
+          href="https://codepen.io/FreeCodeCamp/"
+          class="btn btn-show-all"
+          target="_blank"
+          ><i id="left" class="fa-solid fa-angles-left"></i> Show all
+          <i id="right" class="fa-solid fa-angles-right"></i
+        ></a>
       </section>
       <section id="contact"></section>
     </main>

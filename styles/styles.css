@@ -16,6 +16,9 @@
   --color-solid-pink: #903749;
   --color-eggplant: #53354a;
 
+  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-shadow-bold: rgba(0, 0, 0, 0.75);
+
   --height-header: 9vmin;
 }
 
@@ -38,16 +41,16 @@ html {
 }
 
 #header {
-  background-color: var(--color-martinique);
+  background-color: var(--color-solid-pink);
   display: flex;
   position: fixed;
   min-height: 50px;
   height: var(--height-header);
   width: 100%;
-  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 0 0 var(--color-shadow);
 }
 
-#header-nav {
+#navbar {
   font-weight: bold;
   font-size: 1.3rem;
   margin: auto var(--height-header) auto auto;
@@ -97,45 +100,72 @@ html {
   display: inline-block;
 }
 
-#welcome {
+#welcome-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   height: 100vh;
-  background-color: var(--color-ebb);
+  background-color: var(--color-martinique);
   background: linear-gradient(
-    0deg,
-    rgba(234, 222, 222, 1) 0%,
-    rgba(83, 53, 74, 0.7) 100% /* rgba(128, 128, 128, 1) 100% */
+    45deg,
+    rgba(43, 46, 74, 1) 0%,
+    rgba(83, 53, 74, 1) 100%
   );
 }
 
-#welcome > h2 {
-  font-size: 4rem;
-  color: var(--color-black);
-  margin-top: -1em;
+#welcome-section > h1 {
+  font-size: 4.5rem;
+  color: var(--color-ebb);
+  margin-top: -0.5rem;
+
+  background: linear-gradient(
+    0deg,
+    var(--color-cinnabar) 0%,
+    var(--color-ebb) 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-@media (max-width: 430px) {
-  #welcome > h2 {
-    font-size: 3.5rem;
+#welcome-section > h3 {
+  font-size: 2rem;
+  color: var(--color-cinnabar);
+  margin-top: -1em;
+  padding: 1em;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  #welcome-section > h1 {
+    font-size: 4rem;
+  }
+  #welcome-section > h3 {
+    font-size: 1.75rem;
   }
 }
 
-#welcome > h3 {
-  font-size: 1.5rem;
-  color: var(--color-solid-pink);
-  margin-top: -1em;
-  padding: 1em;
+@media (max-width: 500px) {
+  #welcome-section > h1 {
+    font-size: 3.5rem;
+  }
+  #welcome-section > h3 {
+    font-size: 1.5rem;
+  }
 }
 
-#about {
+#projects {
   text-align: center;
   padding: 10rem 2rem;
-  /* background-color: var(--color-jaffa); */
-  background-color: var(--color-solid-pink);
+  background: linear-gradient(
+    45deg,
+    var(--color-martinique) 0%,
+    var(--color-eggplant) 100%
+  );
+  background-color: var(--color-eggplant);
 }
 
 #about-title {
@@ -150,12 +180,12 @@ html {
 #project-div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 3rem;
   justify-items: center;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  margin-bottom: 3.5rem;
 }
 
 #project-div a {
@@ -168,25 +198,65 @@ html {
 }
 
 #project-div figure:hover img {
-  box-shadow: 0 0 10px 2px var(--color-martinique);
+  box-shadow: 0 0 10px 2px var(--color-shadow-bold);
 }
 
-#project-div figure:hover figcaption {
-  color: var(--color-cinnabar);
+#project-div figure:hover > figcaption > i {
+  color: var(--color-solid-pink);
 }
 
 #project-div img {
   max-width: 100%;
   border-radius: 0.5rem;
-  padding: 0.2rem;
-  border: 2px solid var(--color-eggplant);
-  box-shadow: 0 1px 5px 1px var(--color-martinique);
-  transition: box-shadow 0.2s ease-out;
+  padding: 0.1rem;
+  border: 3px solid var(--color-solid-pink);
+  box-shadow: 0 1px 5px 1px var(--color-shadow);
+  transition: box-shadow 0.15s ease-out;
 }
 
-#project-div figcaption {
+.project-tile {
   padding-bottom: 0.5em;
   color: var(--color-martinique);
   font-weight: bold;
-  transition: color 0.2s ease-out;
+  transition: color 0.15s ease-out;
+}
+
+.project-tile > i {
+  color: var(--color-ebb);
+  transition: color 0.15s ease-out;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.6em 0.3em 0.4em 0.3em;
+}
+
+.btn-show-all {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--color-solid-pink);
+  font-weight: bold;
+  background: var(--color-ebb);
+  transition: all 0.2s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--color-solid-pink);
+  color: var(--color-ebb);
+  padding: 0.6em 0.7em 0.4em 0.7em;
+}
+
+.btn-show-all:hover > i#left {
+  transform: translateX(-2px);
+}
+
+.btn-show-all:hover > i#right {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  color: var(--color-ebb);
+  /* transform: translateX(0); */
+  transition: all 0.2s ease-out;
 }
