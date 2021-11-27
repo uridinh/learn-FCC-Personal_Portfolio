@@ -349,7 +349,7 @@ html {
 }
 
 .contact-link:hover {
-  transform: translateY(5px);
+  transform: translateY(-5px);
 }
 
 @media (max-width: 1007px) {
