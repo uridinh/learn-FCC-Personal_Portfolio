@@ -87,7 +87,7 @@ html {
 }
 
 #logo-link {
-  height: 50%;
+  height: 61.8%;
   margin: auto var(--height-header);
 }
 
@@ -96,6 +96,8 @@ html {
   height: 100%;
 }
 
+/*-----------------------------------------*/
+/* Welcome Section */
 .line {
   display: inline-block;
 }
@@ -117,10 +119,10 @@ html {
 
 #welcome-section > h1 {
   font-size: 4.5rem;
-  color: var(--color-ebb);
+  color: var(--color-jaffa);
   margin-top: -0.5rem;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     var(--color-cinnabar) 0%,
     var(--color-ebb) 100%
@@ -128,7 +130,7 @@ html {
 
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent; */
 }
 
 #welcome-section > h3 {
@@ -137,6 +139,7 @@ html {
   margin-top: -1em;
   padding: 1em;
   font-style: italic;
+  font-weight: normal;
 }
 
 @media (max-width: 900px) {
@@ -157,20 +160,22 @@ html {
   }
 }
 
+/*-----------------------------------------*/
+/* Project Section */
 #projects {
   text-align: center;
-  padding: 10rem 2rem;
+  padding: 7rem 2rem;
+  background-color: var(--color-eggplant);
   background: linear-gradient(
     45deg,
     var(--color-martinique) 0%,
     var(--color-eggplant) 100%
   );
-  background-color: var(--color-eggplant);
 }
 
 #about-title {
   max-width: 70vw;
-  color: var(--color-ebb);
+  color: var(--color-jaffa);
   font-size: 2rem;
   margin: 0 auto 6rem auto;
   padding-bottom: 1rem;
@@ -195,23 +200,7 @@ html {
 #project-div figure {
   background-color: var(--color-ebb);
   border-radius: 0.5rem;
-}
-
-#project-div figure:hover img {
-  box-shadow: 0 0 10px 2px var(--color-shadow-bold);
-}
-
-#project-div figure:hover > figcaption > i {
-  color: var(--color-solid-pink);
-}
-
-#project-div img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-  padding: 0.1rem;
-  border: 3px solid var(--color-solid-pink);
-  box-shadow: 0 1px 5px 1px var(--color-shadow);
-  transition: box-shadow 0.15s ease-out;
+  transition: background 0.2s ease-out;
 }
 
 .project-tile {
@@ -224,6 +213,31 @@ html {
 .project-tile > i {
   color: var(--color-ebb);
   transition: color 0.15s ease-out;
+}
+
+#project-div figure:hover {
+  background-color: var(--color-solid-pink);
+}
+
+#project-div figure:hover img {
+  box-shadow: 0 0 10px 2px var(--color-shadow-bold);
+}
+
+#project-div figure:hover > figcaption {
+  color: var(--color-ebb);
+}
+
+#project-div figure:hover > figcaption > i {
+  color: var(--color-ebb);
+}
+
+#project-div img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+  border: 3px solid var(--color-solid-pink);
+  box-shadow: 0 1px 5px 1px var(--color-shadow);
+  transition: box-shadow 0.15s ease-out;
 }
 
 .btn {
@@ -259,4 +273,99 @@ html {
   color: var(--color-ebb);
   /* transform: translateX(0); */
   transition: all 0.2s ease-out;
+}
+
+/*-----------------------------------------*/
+/* Contact Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--color-solid-pink);
+  background: linear-gradient(
+    45deg,
+    var(--color-martinique) 0%,
+    var(--color-eggplant) 100%
+  );
+}
+
+#contact > h1 {
+  font-size: 3rem;
+  color: var(--color-jaffa);
+  padding-top: 2em;
+}
+
+#contact > h3 {
+  font-size: 1.25rem;
+  color: var(--color-ebb);
+  font-weight: normal;
+  font-style: italic;
+}
+
+#contact-div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-top: 1.25em;
+  padding-bottom: 5em;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--color-jaffa);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-out;
+}
+
+.contact-link > i {
+  color: var(--color-cinnabar);
+}
+
+.contact-link:hover {
+  transform: translateY(5px);
+}
+
+/*-----------------------------------------*/
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  padding-top: 1.75rem;
+  background: var(--color-solid-pink);
+  background: linear-gradient(
+    45deg,
+    var(--color-martinique) 0%,
+    var(--color-eggplant) 100%
+  );
+  border-top: 4px solid var(--color-solid-pink);
+}
+
+footer > p {
+  padding: 0 1rem;
+  color: var(--color-ebb);
+}
+
+footer > p > a {
+  /* text-decoration: none; */
+  color: var(--color-jaffa);
+}
+
+footer > p > a > i {
+  vertical-align: middle;
+}
+
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+  }
+  footer > p {
+    padding: 0.5rem 0;
+  }
 }
