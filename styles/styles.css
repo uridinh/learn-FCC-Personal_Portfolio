@@ -282,6 +282,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   height: 80vh;
   background-color: var(--color-solid-pink);
   background: linear-gradient(
@@ -302,6 +303,9 @@ html {
   color: var(--color-ebb);
   font-weight: normal;
   font-style: italic;
+  padding: 1em;
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
 }
 
 #contact-div {
